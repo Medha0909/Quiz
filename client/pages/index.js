@@ -17,7 +17,7 @@ export default function Home() {
  
 
   function handleSubmit(){
-    typeof window !== "undefined" ?localStorage.setItem("Name",name):undefined;
+    localStorage.setItem("Name",name);
   
     Router.push("/dashboard");
   }

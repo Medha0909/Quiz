@@ -1,11 +1,12 @@
 import React from 'react';
 import Router from 'next/router';
 const ResultCard = () => {
-    function handleSubmit(){
-      localStorage.setItem("score",0);
-	localStorage.setItem("wrightAns",0);
-	localStorage.setItem("wrongAns",0);
-        Router.push("/")
+   function handleSubmit(){
+      typeof window !== "undefined" ? localStorage.setItem("score",0):undefined
+      typeof window !== "undefined" ?localStorage.setItem("wrightAns",0):undefined
+      typeof window !== "undefined" ?localStorage.setItem("wrongAns",0):undefined
+      Router.push("/")
+       
       }
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-green-400 to-green-100">
